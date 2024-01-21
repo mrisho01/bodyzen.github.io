@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BodyZenWebsite2</title>
+    <link rel="stylesheet" href="css/services_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5af561887c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="header">
+    <nav>
+        <a href="index.html"><img src="img/logo2.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    </section>
+
+    <section class="gallery_intro">
+        <div class="gallery_text">
+            <h2>Discover Our Detox Transformation</h2>
+            <p>Indulge in the beauty of our previous detox projects. Each image tells a story of rejuvenation and transformation.</p>
+            <p class="gallery_link">
+                <a href="https://www.instagram.com/bodyzen__therapeutics/" target="_blank">Explore more on our Instagram</a>
+            </p>
+        </div>
+    </section>
+    
+
+    <!--Sliding gallery-->
+    <section class="container">
+	<div class="slider-wrapper">
+		<div class="slider">
+			<img id="slide-1" src="img/gallery_1.png" alt="3D rendering of an imaginary orange planet in space" />
+			<img id="slide-2" src="img/gallery_2.png" alt="3D rendering of an imaginary green planet in space" />
+			<img id="slide-3" src="img/gallery_3.png" alt="3D rendering of an imaginary blue planet in space" />
+		</div>
+		<div class="slider-nav">
+			<a href="#slide-1"></a>
+			<a href="#slide-2"></a>
+			<a href="#slide-3"></a>
+		</div>
+	</div>
+    </section>
+
+
+
+<!-- Simple Contact Footer -->
+    <section class="footer">
+    <h4>Contact Us</h4>
+    <div class="icons">
+        <a href="https://www.instagram.com/bodyzen__therapeutics/" target="_blank">
+            <i class="fa fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank">
+            <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="#">
+            <i class="fa fa-envelope"></i>
+        </a>
+    </div>
+    </section>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

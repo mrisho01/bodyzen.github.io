@@ -1,0 +1,450 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.background-image {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../img/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+nav {
+    display: flex;
+    padding: 1% 6%;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #EDECEB; /* Off-white background */
+    position: relative;
+}
+
+nav img {
+    width: 100px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #000; /* Change link color to black */
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #000;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+
+}
+
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+    font-weight: 500;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    border: 1px solid #93CBDD;
+    background: #93CBDD;
+    transition: 1s;
+}
+
+nav .fa{
+    display: none;
+}
+
+/* fixes page for smaller screens */
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 25px;
+        font-weight: 500;
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #93CBDD;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+
+
+/* About Section */
+.about {
+    display: flex;
+    background-color: #EDECEB; /* Off-white background color */
+    padding: 40px; /* Adjust padding as needed */
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.about-text {
+    background-color: #93CBDD; /* Blue background */
+    padding: 20px;
+    float: left;
+    width: calc(50% - 20px); /* Adjust the width as needed */
+    margin-right: -10px; /* Add a negative margin to overlap with the image */
+}
+
+.about-text h1 {
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: 600;
+    margin-bottom: 10px; /* Adjust margin as needed */
+    padding-top: 40px;
+    padding-left: 40px;
+}
+
+.about-text p {
+    font-size: 16px; /* Adjust font size as needed */
+    color: #333; /* Adjust text color as needed */
+    padding-bottom: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+.about-image {
+    width: 50%;
+    max-height: 100%;
+    float: right;
+    margin-left: -10px; /* Add a negative margin to overlap with the text */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 700px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text, .about-image {
+        width: 100%;
+        padding: 10px; /* Adjust padding as needed */
+    }
+
+    .about-text h1 {
+        font-size: 20px; /* Adjust font size as needed */
+    }
+
+    .about-text p {
+        font-size: 14px; /* Adjust font size as needed */
+    }
+}
+
+/* Service section */
+.services {
+    background-color: #EDECEB; /* Off-white background */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.services-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service {
+    padding: 20px;
+    text-align: left;
+    width: 300px;
+    position: relative;
+}
+
+
+.service img {
+    width: 100%; /* Set image width to 100% of its container */
+    height: 200px; /* Maintain aspect ratio */
+    max-height: 200px; /* Set max height to maintain consistency */
+    margin-bottom: 20px;
+}
+
+.service h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.service h3::after {
+    content: "";
+    display: block;
+    width: 100%; /* Width of the underline */
+    height: 2px;
+    background-color: #000; /* Black underline color */
+    margin-top: 5px; /* Adjust vertical spacing */
+}
+
+
+.service p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Style for the "Book Now" button */
+.service .book-now {
+    display: inline-block; /* Display the button inline */
+    text-decoration: none;
+    color: #000; /* Black text color */
+    background: transparent; /* Transparent background */
+    border: 2px solid #000; /* Black border */
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 0; /* Remove border-radius to make the edges sharp */
+    transition: background-color 0.3s;
+    text-align: center; /* Center the text */
+}
+
+.service .book-now:hover {
+    background-color: #000; /* Change the background color on hover */
+    color: #fff; /* Change the text color on hover */
+}
+
+
+
+/* Simple Contact Footer */
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background-color: #93CBDD;
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.icons .fa{
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+/* Adjustments for Smaller Screens */
+@media(max-width: 700px) {
+    /* Font Sizes */
+    .text-box h1 {
+        font-size: 40px;
+    }
+
+    .text-box p {
+        font-size: 16px;
+    }
+
+    .service h3 {
+        font-size: 20px;
+    }
+
+    .service p {
+        font-size: 14px;
+    }
+
+    .footer h4 {
+        font-size: 20px;
+    }
+
+    /* Image Sizing */
+    .service img {
+        height: auto;
+        max-width: 100%;
+        max-height: none;
+    }
+
+    /* Center Footer Content */
+    .footer h4 {
+        text-align: center;
+    }
+
+    .icons {
+        text-align: center;
+    }
+
+    /* Service section adjustments for smaller screens */
+    .services-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 40px;
+    }
+}
+
+
+/*-----about us section -----*/
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image:;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+.sub-header h1{
+    margin-top: 100px;
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.about-us{
+    display: flex;
+    background-color: #EDECEB;
+    align-items: center;
+    padding: 100px;
+}
+
+.row{
+    display: flex;
+}
+
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.about-col img{
+    width: 100%;
+}
+
+.about-col h1{
+    padding-top: 0;
+}
+
+.about-col p{
+    padding: 15px 0 25px;
+    display: flex;
+}
+
+.blue-btn{
+    border: 1px solid #93CBDD;
+    background: transparent;
+    color: #93CBDD;
+}
+
+.blue-btn:hover{
+    color: #fff;
+}
+
+/* Media Query for About Us Page on Smaller Screens */
+@media (max-width: 700px) {
+    /* Styles specific to your About Us page for screens with a maximum width of 700px or less */
+
+    .row {
+        flex-direction: column; /* Change the flex direction to stack elements vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .about-col {
+        flex-basis: 100%; /* Adjust column width for smaller screens */
+        text-align: center; /* Center align text */
+    }
+
+    .about-col img {
+        width: 80%; /* Adjust image width for smaller screens */
+        margin-top: 20px; /* Add some top margin for spacing */
+    }
+
+    /* Add other styles as needed for smaller screens on your About Us page */
+}
+
+
+/* Services page */
+
